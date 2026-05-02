@@ -1,0 +1,389 @@
+.para-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.para-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.para-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.para-icon {
+  font-size: 36px;
+}
+
+.para-title h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #1a1a2e;
+}
+
+.para-title p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.para-badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Mode Selector */
+.para-modes {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 160px;
+}
+
+.mode-btn:hover {
+  border-color: #6366f1;
+  background: #f5f3ff;
+}
+
+.mode-btn.active {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.mode-icon {
+  font-size: 22px;
+}
+
+.mode-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mode-label {
+  font-weight: 600;
+  color: #1a1a2e;
+  font-size: 14px;
+}
+
+.mode-desc {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* Editor */
+.para-editor {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.para-panel {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.word-count {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.change-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.clear-btn:hover {
+  background: #fee2e2;
+}
+
+.para-textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  color: #1a1a2e;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.para-textarea:focus {
+  border-color: #6366f1;
+}
+
+.para-output {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1a1a2e;
+  min-height: 220px;
+  background: #fafafa;
+  overflow-y: auto;
+}
+
+.para-output.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.output-placeholder {
+  text-align: center;
+  color: #9ca3af;
+}
+
+.output-placeholder span {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.output-placeholder p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Buttons */
+.paraphrase-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.paraphrase-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+.paraphrase-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.output-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.copy-btn, .use-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.copy-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.copy-btn:hover {
+  background: #4f46e5;
+}
+
+.use-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.use-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Divider Arrow */
+.para-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  flex-shrink: 0;
+  font-size: 22px;
+  color: #9ca3af;
+}
+
+.divider-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Error */
+.para-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Stats Bar */
+.para-stats {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.stat-value.change {
+  color: #6366f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .para-editor {
+    flex-direction: column;
+  }
+
+  .para-divider {
+    width: auto;
+    transform: rotate(90deg);
+    height: 30px;
+  }
+
+  .para-modes {
+    flex-direction: column;
+  }
+
+  .mode-btn {
+    min-width: unset;
+  }
+}

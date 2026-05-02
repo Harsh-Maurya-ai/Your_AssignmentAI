@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import DashboardHome from '../components/DashboardHome';
 import AssignmentGenerator from '../components/AssignmentGenerator';
+import ParaphrasingTool from '../components/ParaphrasingTool';
+import GrammarChecker from '../components/GrammarChecker';
+import CitationGenerator from '../components/CitationGenerator';
+import CodeExplainer from '../components/CodeExplainer';
+import CodeDebugger from '../components/CodeDebugger';
 import './Dashboard.css';
+
+const BUILT_PAGES = ['home', 'assignment', 'paraphrase', 'grammar', 'citation', 'code-explainer', 'debugger'];
 
 const Dashboard = () => {
   const [activePage, setActivePage] = useState('home');
@@ -20,7 +27,12 @@ const Dashboard = () => {
         <div className="dashboard-content">
           {activePage === 'home' && <DashboardHome />}
           {activePage === 'assignment' && <AssignmentGenerator />}
-          {activePage !== 'home' && activePage !== 'assignment' && (
+          {activePage === 'paraphrase' && <ParaphrasingTool />}
+          {activePage === 'grammar' && <GrammarChecker />}
+          {activePage === 'citation' && <CitationGenerator />}
+          {activePage === 'code-explainer' && <CodeExplainer />}
+          {activePage === 'debugger' && <CodeDebugger />}
+          {!BUILT_PAGES.includes(activePage) && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>
               <h2>Coming in next steps!</h2>

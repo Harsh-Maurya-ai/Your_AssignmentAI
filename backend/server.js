@@ -6,6 +6,11 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const assignmentRoutes = require('./routes/assignment');
 const exportRoutes = require('./routes/export');
+const paraphraseRoutes = require('./routes/paraphrase');
+const grammarRoutes = require('./routes/grammar');
+const citationRoutes = require('./routes/citation');
+const codeExplainerRoutes = require('./routes/codeExplainer');
+const codeDebuggerRoutes = require('./routes/codeDebugger');
 
 const app = express();
 
@@ -16,6 +21,11 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/assignment', assignmentRoutes);
 app.use('/api/export', exportRoutes);
+app.use('/api/paraphrase', paraphraseRoutes);
+app.use('/api/grammar', grammarRoutes);
+app.use('/api/citation', citationRoutes);
+app.use('/api/code-explainer', codeExplainerRoutes);
+app.use('/api/code-debugger', codeDebuggerRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
