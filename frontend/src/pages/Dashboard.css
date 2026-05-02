@@ -1,0 +1,32 @@
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0a14;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-main {
+  flex: 1;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+.dashboard-main.sidebar-open {
+  margin-left: 260px;
+}
+
+.dashboard-main.sidebar-closed {
+  margin-left: 68px;
+}
+
+.dashboard-content {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main.sidebar-open,
+  .dashboard-main.sidebar-closed {
+    margin-left: 0;
+  }
+}
