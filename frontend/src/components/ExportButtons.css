@@ -1,0 +1,63 @@
+.export-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.export-btn {
+  padding: 9px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.export-btn:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.export-btn.pdf {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.export-btn.word {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.export-spinner-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.export-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: export-spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes export-spin { to { transform: rotate(360deg); } }
+
+.export-error {
+  font-size: 0.8rem;
+  color: #f87171;
+  width: 100%;
+}

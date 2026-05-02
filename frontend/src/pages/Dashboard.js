@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import DashboardHome from '../components/DashboardHome';
+import AssignmentGenerator from '../components/AssignmentGenerator';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -18,7 +19,8 @@ const Dashboard = () => {
       <div className={`dashboard-main ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
         <div className="dashboard-content">
           {activePage === 'home' && <DashboardHome />}
-          {activePage !== 'home' && (
+          {activePage === 'assignment' && <AssignmentGenerator />}
+          {activePage !== 'home' && activePage !== 'assignment' && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>
               <h2>Coming in next steps!</h2>
