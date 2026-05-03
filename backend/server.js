@@ -11,6 +11,7 @@ const grammarRoutes = require('./routes/grammar');
 const citationRoutes = require('./routes/citation');
 const codeExplainerRoutes = require('./routes/codeExplainer');
 const codeDebuggerRoutes = require('./routes/codeDebugger');
+const pseudocodeRoutes = require('./routes/pseudocode');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/api/grammar', grammarRoutes);
 app.use('/api/citation', citationRoutes);
 app.use('/api/code-explainer', codeExplainerRoutes);
 app.use('/api/code-debugger', codeDebuggerRoutes);
+app.use('/api/pseudocode', pseudocodeRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)

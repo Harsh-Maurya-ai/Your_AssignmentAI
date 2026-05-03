@@ -7,10 +7,10 @@ import GrammarChecker from '../components/GrammarChecker';
 import CitationGenerator from '../components/CitationGenerator';
 import CodeExplainer from '../components/CodeExplainer';
 import CodeDebugger from '../components/CodeDebugger';
+import PseudocodeConverter from '../components/PseudocodeConverter';
 import './Dashboard.css';
 
-const BUILT_PAGES = ['home', 'assignment', 'paraphrase', 'grammar', 'citation', 'code-explainer', 'debugger'];
-
+const BUILT_PAGES = ['home', 'assignment', 'paraphrase', 'grammar', 'citation', 'code-explainer', 'debugger', 'pseudocode'];
 const Dashboard = () => {
   const [activePage, setActivePage] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -32,6 +32,7 @@ const Dashboard = () => {
           {activePage === 'citation' && <CitationGenerator />}
           {activePage === 'code-explainer' && <CodeExplainer />}
           {activePage === 'debugger' && <CodeDebugger />}
+          {activePage === 'pseudocode' && <PseudocodeConverter />}
           {!BUILT_PAGES.includes(activePage) && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>
