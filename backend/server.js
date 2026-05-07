@@ -35,6 +35,9 @@ app.use('/api/viva', require('./routes/viva'));
 app.use('/api/summarizer', require('./routes/summarizer'));
 app.use('/api/youtube', require('./routes/youtube'));
 app.use('/api/flashcards', require('./routes/flashcards'));
+app.use('/api/mindmap', require('./routes/mindmap'));
+app.use('/api/mcq', require('./routes/mcq'));
+app.use('/api/pyq', require('./routes/pyq'));
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))

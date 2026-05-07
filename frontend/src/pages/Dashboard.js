@@ -14,6 +14,9 @@ import VivaPredictor from '../components/VivaPredictor';
 import NotesSummarizer from '../components/NotesSummarizer';
 import YouTubeSummarizer from '../components/YouTubeSummarizer';
 import FlashcardGenerator from '../components/FlashcardGenerator';
+import MindMapGenerator from '../components/MindMapGenerator';
+import MCQPractice from '../components/MCQPractice';
+import PYQAnalyzer from '../components/PYQAnalyzer';
 import './Dashboard.css';
 
 const BUILT_PAGES = [
@@ -30,7 +33,10 @@ const BUILT_PAGES = [
   'viva',
   'summarizer',
   'youtube',  
-  'flashcards'
+  'flashcards',
+  'mindmap',
+  'mcq',
+  'pyq',
 ];
 
 const Dashboard = () => {
@@ -61,6 +67,9 @@ const Dashboard = () => {
           {activePage === 'summarizer' && <NotesSummarizer />}
           {activePage === 'youtube' && <YouTubeSummarizer />}
           {activePage === 'flashcards' && <FlashcardGenerator />}
+          {activePage === 'mindmap' && <MindMapGenerator />}
+          {activePage === 'mcq' && <MCQPractice />}
+          {activePage === 'pyq' && <PYQAnalyzer />}
           {!BUILT_PAGES.includes(activePage) && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>

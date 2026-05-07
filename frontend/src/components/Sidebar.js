@@ -23,6 +23,7 @@ const menuItems = [
   { id: 'flashcards', icon: '🃏', label: 'Flashcard Generator' },
   { id: 'mcq', icon: '❓', label: 'MCQ Practice' },
   { id: 'mindmap', icon: '🧠', label: 'Mind Map Generator' },
+  { id: 'pyq', icon: '📄', label: 'PYQ Analyzer', badge: 'HOT' },
   { id: 'divider4', divider: true },
   { id: 'planner', icon: '📅', label: 'Study Planner', badge: 'AI' },
   { id: 'deadline', icon: '⏰', label: 'Deadline Tracker' },
