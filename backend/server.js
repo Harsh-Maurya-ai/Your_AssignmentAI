@@ -12,13 +12,14 @@ const citationRoutes = require('./routes/citation');
 const codeExplainerRoutes = require('./routes/codeExplainer');
 const codeDebuggerRoutes = require('./routes/codeDebugger');
 const pseudocodeRoutes = require('./routes/pseudocode');
+const labManualRoutes = require('./routes/labManual');
+const readmeGeneratorRoutes = require('./routes/readmeGenerator');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/assignment', assignmentRoutes);
 app.use('/api/export', exportRoutes);
@@ -28,8 +29,9 @@ app.use('/api/citation', citationRoutes);
 app.use('/api/code-explainer', codeExplainerRoutes);
 app.use('/api/code-debugger', codeDebuggerRoutes);
 app.use('/api/pseudocode', pseudocodeRoutes);
+app.use('/api/lab-manual', labManualRoutes);
+app.use('/api/readme', readmeGeneratorRoutes);
 
-// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));

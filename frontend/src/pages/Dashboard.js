@@ -8,9 +8,15 @@ import CitationGenerator from '../components/CitationGenerator';
 import CodeExplainer from '../components/CodeExplainer';
 import CodeDebugger from '../components/CodeDebugger';
 import PseudocodeConverter from '../components/PseudocodeConverter';
+import LabManualGenerator from '../components/LabManualGenerator';
+import ReadmeGenerator from '../components/ReadmeGenerator';
 import './Dashboard.css';
 
-const BUILT_PAGES = ['home', 'assignment', 'paraphrase', 'grammar', 'citation', 'code-explainer', 'debugger', 'pseudocode'];
+const BUILT_PAGES = [
+  'home', 'assignment', 'paraphrase', 'grammar', 'citation',
+  'code-explainer', 'debugger', 'pseudocode', 'lab-manual', 'readme'
+];
+
 const Dashboard = () => {
   const [activePage, setActivePage] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -33,6 +39,8 @@ const Dashboard = () => {
           {activePage === 'code-explainer' && <CodeExplainer />}
           {activePage === 'debugger' && <CodeDebugger />}
           {activePage === 'pseudocode' && <PseudocodeConverter />}
+          {activePage === 'lab-manual' && <LabManualGenerator />}
+          {activePage === 'readme' && <ReadmeGenerator />}
           {!BUILT_PAGES.includes(activePage) && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>
