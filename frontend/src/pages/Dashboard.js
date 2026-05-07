@@ -10,11 +10,27 @@ import CodeDebugger from '../components/CodeDebugger';
 import PseudocodeConverter from '../components/PseudocodeConverter';
 import LabManualGenerator from '../components/LabManualGenerator';
 import ReadmeGenerator from '../components/ReadmeGenerator';
+import VivaPredictor from '../components/VivaPredictor';
+import NotesSummarizer from '../components/NotesSummarizer';
+import YouTubeSummarizer from '../components/YouTubeSummarizer';
+import FlashcardGenerator from '../components/FlashcardGenerator';
 import './Dashboard.css';
 
 const BUILT_PAGES = [
-  'home', 'assignment', 'paraphrase', 'grammar', 'citation',
-  'code-explainer', 'debugger', 'pseudocode', 'lab-manual', 'readme'
+  'home',
+  'assignment',
+  'paraphrase',
+  'grammar',
+  'citation',
+  'code-explainer',
+  'debugger',
+  'pseudocode',
+  'lab-manual',
+  'readme',
+  'viva',
+  'summarizer',
+  'youtube',  
+  'flashcards'
 ];
 
 const Dashboard = () => {
@@ -41,6 +57,10 @@ const Dashboard = () => {
           {activePage === 'pseudocode' && <PseudocodeConverter />}
           {activePage === 'lab-manual' && <LabManualGenerator />}
           {activePage === 'readme' && <ReadmeGenerator />}
+          {activePage === 'viva' && <VivaPredictor />}
+          {activePage === 'summarizer' && <NotesSummarizer />}
+          {activePage === 'youtube' && <YouTubeSummarizer />}
+          {activePage === 'flashcards' && <FlashcardGenerator />}
           {!BUILT_PAGES.includes(activePage) && (
             <div className="coming-soon">
               <div className="coming-soon-icon">🚀</div>

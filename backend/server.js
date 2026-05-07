@@ -31,6 +31,10 @@ app.use('/api/code-debugger', codeDebuggerRoutes);
 app.use('/api/pseudocode', pseudocodeRoutes);
 app.use('/api/lab-manual', labManualRoutes);
 app.use('/api/readme', readmeGeneratorRoutes);
+app.use('/api/viva', require('./routes/viva'));
+app.use('/api/summarizer', require('./routes/summarizer'));
+app.use('/api/youtube', require('./routes/youtube'));
+app.use('/api/flashcards', require('./routes/flashcards'));
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
